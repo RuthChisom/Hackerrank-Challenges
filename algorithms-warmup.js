@@ -49,8 +49,10 @@ function readLine() {
     return input_stdin_array[input_currentline++];
 }
 
+// Complete the solveMeFirst function in the editor below.
 function solveMeFirst(a, b) {
   // Hint: Type return a+b below   
+  return a + b; //my answer
 }
 
 
