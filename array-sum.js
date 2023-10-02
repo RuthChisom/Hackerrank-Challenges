@@ -63,7 +63,15 @@ function readLine() {
 
 function simpleArraySum(ar) {
     // Write your code here
+    // first answer
+    // var sum=0;
+    // for(let i=0;i<ar.length;i++){
+    //     sum+=ar[i];
+    // }
+    // return sum;
 
+    // better answer
+    return ar.reduce((a, b) => a + b);
 }
 
 function main() {
