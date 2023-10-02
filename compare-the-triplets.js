@@ -87,6 +87,13 @@ function readLine() {
  */
 
 function compareTriplets(a, b) {
+    // my answer
+    var comparisionScore = [0,0];
+    for (let i=0;i<a.length;i++){
+        if(a[i]>b[i]) comparisionScore[0]+=1
+        else if (a[i]<b[i]) comparisionScore[1]+=1
+    }
+    return comparisionScore;
 
 }
 
