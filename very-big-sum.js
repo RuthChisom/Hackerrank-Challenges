@@ -23,3 +23,53 @@
 // The range of the 32-bit integer is (-2^31) to (2^31 - 1) or [-2147483648,2147483647]
 // When we add several integer values, the resulting sum might exceed the above range. You might need to use long int C/C++/Java to store such sums.
 
+// ANSWER SHEET
+'use strict';
+
+const fs = require('fs');
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', function(inputStdin) {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', function() {
+    inputString = inputString.split('\n');
+
+    main();
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+/*
+ * Complete the 'aVeryBigSum' function below.
+ *
+ * The function is expected to return a LONG_INTEGER.
+ * The function accepts LONG_INTEGER_ARRAY ar as parameter.
+ */
+
+function aVeryBigSum(ar) {
+    // Write your code here
+
+}
+
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+    const arCount = parseInt(readLine().trim(), 10);
+
+    const ar = readLine().replace(/\s+$/g, '').split(' ').map(arTemp => parseInt(arTemp, 10));
+
+    const result = aVeryBigSum(ar);
+
+    ws.write(result + '\n');
+
+    ws.end();
+}
