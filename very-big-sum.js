@@ -57,6 +57,9 @@ function readLine() {
 
 function aVeryBigSum(ar) {
     // Write your code here
+    // my answer
+    return ar.reduce((a, b) => a + b);
+    // my answer
 
 }
 
