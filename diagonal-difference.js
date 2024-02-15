@@ -74,7 +74,15 @@ function readLine() {
 
 function diagonalDifference(arr) {
     // Write your code here
-
+    let primaryDiagonal = 0;
+    let secondaryDiagonal = 0;
+    let noOfarrays = arr.length;
+    // loop through each array
+    for(let i=0;i<noOfarrays;i++){
+        primaryDiagonal += arr[i][i];
+        secondaryDiagonal += arr[i][noOfarrays-(i+1)];
+    }
+    return Math.abs(primaryDiagonal-secondaryDiagonal);
 }
 
 function main() {
