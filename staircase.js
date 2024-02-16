@@ -64,7 +64,10 @@ function readLine() {
 
 function staircase(n) {
     // Write your code here
-
+    for(let i=1; i<=n; i++){
+        // create the string and pad it with space until it reaches length n
+        console.log('#'.repeat(i).padStart(n, " "));
+    }
 }
 
 function main() {
