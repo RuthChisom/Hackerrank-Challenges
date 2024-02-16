@@ -69,6 +69,23 @@ function readLine() {
 
 function plusMinus(arr) {
     // Write your code here
+    let positiveElements = 0;
+    let negativeElements = 0;
+    let zeroElements = 0;
+    
+    // loop through array
+    arr.forEach((element) => {
+        if(element==0) zeroElements++;
+        else if(element>0) positiveElements++;
+        else negativeElements++;
+        }
+    )
+    // get ratios
+    let zeroRatio = (zeroElements/arr.length).toFixed(6);
+    let positiveRatio = (positiveElements/arr.length).toFixed(6);
+    let negativeRatio = (negativeElements/arr.length).toFixed(6);
+    
+    console.log(`${positiveRatio}\n${negativeRatio}\n${zeroRatio}`);
 
 }
 
