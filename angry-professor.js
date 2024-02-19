@@ -75,6 +75,18 @@ function readLine() {
 
 function angryProfessor(k, a) {
     // Write your code here
+    let onTime = 0;
+    // let late = 0;
+    // get number of early vs late students
+    a.forEach(item => {
+        if(item <= 0) onTime++;
+        // else late++
+    })
+    // compare with minimum threshold
+    if(onTime >= k){
+        return "NO"; //Class is NOT cancelled;
+    }
+    else return "YES";
 
 }
 
