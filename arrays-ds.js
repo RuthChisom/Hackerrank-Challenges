@@ -59,6 +59,13 @@ function readLine() {
 function reverseArray(a) {
     // Write your code here
 
+    let newArray = [];
+    let j=1;
+    a.forEach(item => {
+        newArray[a.length-j] = item;
+        j++;
+    })
+    return newArray;
 }
 
 function main() {
