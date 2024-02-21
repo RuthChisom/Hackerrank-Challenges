@@ -108,7 +108,17 @@ function readLine() {
 
 function hourglassSum(arr) {
     // Write your code here
-
+    let hourGlass = [];
+    for(let i=0; i<arr.length-2;i++){ //loop over each array horizontally except the last two
+        for(let j=0; j<arr.length-2;j++){ //loop over each array vertically except the last two
+            let topRow = arr[i][j] + arr[i][j+1] + arr[i][j+2]
+            let middleRow = arr[i+1][j+1];
+            let bottomRow = arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2];
+            let sum = topRow + middleRow + bottomRow;
+            hourGlass.push(sum);
+        }
+    }
+    return Math.max(...hourGlass);
 }
 
 function main() {
