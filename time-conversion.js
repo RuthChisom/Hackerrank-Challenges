@@ -57,7 +57,25 @@ function readLine() {
 
 function timeConversion(s) {
     // Write your code here
-
+    //split time to get the last part
+    const timeArray = s.split(":")
+    const lastTimePart = timeArray[timeArray.length-1];
+    //if AM, return same time, but remove AM
+    if(lastTimePart.endsWith('AM')){
+        //if 12AM, return 00 as first element
+        if(timeArray[0]==12){ 
+            timeArray[0] = '00';
+        }
+        return `${timeArray[0]}:${timeArray[1]}:${timeArray[2]}`.replace('AM','');
+    }
+    // iF PM
+    else{
+        // If not 12PM, add 12 to first element
+        if(timeArray[0]!=12){
+            timeArray[0] = parseInt(timeArray[0]) + 12;
+        }
+        return `${timeArray[0]}:${timeArray[1]}:${timeArray[2]}`.replace('PM','');
+    }
 }
 
 function main() {
