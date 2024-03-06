@@ -102,6 +102,23 @@ function readLine() {
 
 function dynamicArray(n, queries) {
     // Write your code here
+    let arr = [];
+    let lastAnswer = 0;
+    let lastAnswerArray = []
+    for(let i=1;i<=n;i++){
+        arr.push([]);
+    }
+    for(let j=0; j<queries.length; j++){
+        let idx = ((queries[j][1] ^ lastAnswer) % n);
+        if(queries[j][0]==1){
+            arr[idx].push(queries[j][2])
+        }
+        else if(queries[j][0]==2){
+            lastAnswer = arr[idx][queries[j][2] % arr[idx].length];
+            lastAnswerArray.push(lastAnswer);
+        }
+    }
+    return lastAnswerArray;
 
 }
 
