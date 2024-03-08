@@ -61,7 +61,23 @@ function readLine() {
 
 function miniMaxSum(arr) {
     // Write your code here
-
+    // declare a sums array
+    let sumArray = [];
+    // loop through the array
+    for(let i=0; i<arr.length; i++){
+        let sum = 0;
+        // for each item, find the sum of all elements except the item
+        for(let j=0; j<arr.length; j++){
+            // sum everything except current index
+            if (i != j){
+                sum+=arr[j];
+            }
+        }
+        // add the sum to the sums array
+        sumArray.push(sum);
+    }
+    // get the max and min of the array
+    console.log(`${Math.min(...sumArray)} ${Math.max(...sumArray)}`)
 }
 
 function main() {
