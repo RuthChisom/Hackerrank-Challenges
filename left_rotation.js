@@ -64,6 +64,14 @@ function readLine() {
 
 function rotateLeft(d, arr) {
     // Write your code here
+    let counter=1;
+    while (counter<=d){
+            let firstElement = arr[0]; // get the first element
+            arr.shift(); //remove the first element
+            arr.push(firstElement); //add the first element as the last
+        counter++;
+    }
+    return arr;
 
 }
 
