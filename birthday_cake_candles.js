@@ -58,6 +58,13 @@ function readLine() {
 
 function birthdayCakeCandles(candles) {
     // Write your code here
+    let counter = 0;
+    let tallestCandle = Math.max(...candles); //find the max height
+    // find how many times it appears
+    candles.forEach(item=>{
+        if(item==tallestCandle) counter++;
+    })
+    return counter;
 
 }
 
