@@ -120,6 +120,15 @@ function readLine() {
 
 function matchingStrings(stringList, queries) {
     // Write your code here
+    // define results array
+    let resultsArray = [];
+    // for each element of queries, check how many times it is present in stringList
+    queries.forEach(item=>{
+        let result = stringList.filter((b) => b == item).length;
+        // add frequency to results array
+        resultsArray.push(result);
+    })
+    return resultsArray;
 
 }
 
