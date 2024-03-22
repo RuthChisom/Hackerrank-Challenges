@@ -80,8 +80,21 @@ function readLine() {
 
 function arrayManipulation(n, queries) {
     // Write your code here
-
+    let arr = new Array(n + 1).fill(0); // Initialize array with zeros
+    for (let i = 0; i < queries.length; i++) {
+        let [start, end, value] = queries[i]; // Destructure the query
+        arr[start - 1] += value; // Add value to start position
+        arr[end] -= value; // Subtract value at end position
+    }
+    let max = 0;
+    let sum = 0;
+    for (let i = 0; i < n; i++) {
+        sum += arr[i];
+        max = Math.max(max, sum);
+    }
+    return max;
 }
+
 
 function main() {
     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
