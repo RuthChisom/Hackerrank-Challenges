@@ -78,28 +78,27 @@ function readLine() {
 
 function gradingStudents(grades) {
     // Write your code here
-    console.log(grades)
+    // for(let i=0; i<grades.length; i++){
+    //     if(grades[i]>=38){
+    //         let remainder = grades[i] % 5;//4
+    //         if(remainder>=3){
+    //             let extraMark = 5 - remainder;
+    //             grades[i] += extraMark;
+    //             console.log(grades[i]);
+    //         }
+    //     }
+    // }
     for(let i=0; i<grades.length; i++){
         if(grades[i]>=38){
             let remainder = grades[i] % 5;//4
-            if(remainder>=3){
-                let extraMark = 5 - remainder;
-                grades[i] += extraMark;
+            let difference = 5 - remainder //diff from the next multiple of 5
+            if(difference < 3){
+                grades[i] += difference;
                 console.log(grades[i]);
             }
         }
     }
-    // grades.forEach((element)=>{
-    //     if(element>40){
-    //         let remainder = element % 5;//4
-    //         if(remainder>=3){
-    //             let extraMark = 5 - remainder;
-    //             element += extraMark;
-    //             console.log(element);
-    //         }
-    //     }
-    // })
-return grades;
+    return grades;
 }
 
 function main() {
