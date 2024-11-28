@@ -52,7 +52,35 @@
 
 
 // ANSWER SHEET
-
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    // Write your code here
+    var applesLanding = [];
+    var orangesLanding = [];
+    var samApples = 0;
+    var samOranges = 0;
+    //find the landing position of the apples
+    for(let i=0; i<apples.length; i++){
+        applesLanding[i] = apples[i] + a;
+    }
+    //find the landing position of the oranges
+    for(let i=0; i<oranges.length; i++){
+        orangesLanding[i] = oranges[i] + b;
+    }
+    //calculate the number of apples within Sam's house
+    for(let i=0; i<applesLanding.length; i++){
+        if(applesLanding[i]>=s & applesLanding[i]<=t){
+            samApples++;
+        }
+    }
+    //calculate the number of oranges within Sam's house
+    for(let i=0; i<orangesLanding.length; i++){
+        if(orangesLanding[i]>=s & orangesLanding[i]<=t){
+            samOranges++;
+        }
+    }
+    console.log(samApples);
+    console.log(samOranges);
+}
 
 
 
