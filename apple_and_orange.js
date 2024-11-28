@@ -61,19 +61,15 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
     //find the landing position of the apples
     for(let i=0; i<apples.length; i++){
         applesLanding[i] = apples[i] + a;
-    }
-    //find the landing position of the oranges
-    for(let i=0; i<oranges.length; i++){
-        orangesLanding[i] = oranges[i] + b;
-    }
-    //calculate the number of apples within Sam's house
-    for(let i=0; i<applesLanding.length; i++){
+        //calculate the number of apples within Sam's house
         if(applesLanding[i]>=s & applesLanding[i]<=t){
             samApples++;
         }
     }
-    //calculate the number of oranges within Sam's house
-    for(let i=0; i<orangesLanding.length; i++){
+    //find the landing position of the oranges
+    for(let i=0; i<oranges.length; i++){
+        orangesLanding[i] = oranges[i] + b;
+        //calculate the number of oranges within Sam's house
         if(orangesLanding[i]>=s & orangesLanding[i]<=t){
             samOranges++;
         }
